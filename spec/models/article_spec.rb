@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  context "" do
-    it "orders them in reverse chronologically" do
+  context "Article's operation" do
+    it "create article" do
       article = Article.create!(:title => "First blog", :body => "hello world.", :status => "public")
       expect(article.title).to eq("First blog")
       expect(article.body).to eq("hello world.")
